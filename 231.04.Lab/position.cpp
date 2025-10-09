@@ -10,10 +10,10 @@
 #include "position.h"
 #include <iostream>
 
- /******************************************
-  * POSITION INSERTION OPERATOR
-  ******************************************/
-ostream& operator << (ostream& out, const Position& rhs)
+/******************************************
+ * POSITION INSERTION OPERATOR
+ ******************************************/
+ostream & operator << (ostream & out, const Position & rhs)
 {
    out << "error";
    return out;
@@ -22,8 +22,8 @@ ostream& operator << (ostream& out, const Position& rhs)
 /*************************************
  * POSITION EXTRACTION OPERATOR
  **************************************/
-istream& operator >> (istream& in, Position& rhs)
+istream & operator >> (istream & in,  Position & rhs)
 {
-   return in;
+   return in;   
 }
 
