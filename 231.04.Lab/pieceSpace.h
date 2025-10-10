@@ -23,6 +23,6 @@ class Space : public Piece
 public:
    Space(int c, int r) : Piece(9, 9)   {               }
    ~Space()                            {               }
-   PieceType getType()           const { return ROOK;  }
+   PieceType getType()           const { return SPACE;  }
    void display(ogstream* pgout) const {               }
 };

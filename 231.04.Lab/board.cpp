@@ -14,20 +14,17 @@
 using namespace std;
 
 
-// we really REALLY need to delete this.
-Space space;
-
 /***********************************************
 * BOARD : GET
 *         Get a piece from a given position.
 ***********************************************/
 const Piece& Board::operator [] (const Position& pos) const
 {
-   return space;
+   return *board[pos.getCol()][pos.getRow()];
 }
 Piece& Board::operator [] (const Position& pos)
 {
-   return space;
+   return *board[pos.getCol()][pos.getRow()];
 }
 
 
@@ -41,7 +38,7 @@ BoardEmpty::BoardEmpty() : BoardDummy(), pSpace(nullptr)
 {
    pSpace = new Space;
 }
-BoardEmpty::~BoardEmpty() 
+BoardEmpty::~BoardEmpty()
 {
    delete pSpace;
 }

@@ -1,6 +1,6 @@
 /***********************************************************************
  * Header File:
- *    BOARD 
+ *    BOARD
  * Author:
  *    <your name here>
  * Summary:
@@ -42,18 +42,18 @@ class Board
 public:
 
    // getters
-   virtual int  getCurrentMove() const { return -99;      }
-   virtual bool whiteTurn()      const { return false;  }
+   virtual int  getCurrentMove() const { return numMoves; }
+   virtual bool whiteTurn()      const { return getCurrentMove() % 2 == 0; }
    virtual void display(const Position& posHover, const Position& posSelect) const {}
    virtual const Piece& operator [] (const Position& pos) const;
 
    // setters
-   virtual void move(const Move & move) { }
+   virtual void move(const Move& move) {}
    virtual Piece& operator [] (const Position& pos);
 
 protected:
    int numMoves;
-   Piece * board[8][8];    // the board of chess pieces
+   Piece* board[8][8];    // the board of chess pieces
 };
 
 
@@ -63,24 +63,45 @@ protected:
  **************************************************/
 class BoardDummy : public Board
 {
-   friend TestBoard; 
+   friend TestBoard;
 public:
-   BoardDummy()                                           {                }
-   ~BoardDummy()                                          {                }
+   BoardDummy()
+   {
+      numMoves = 0;
+      for (int r = 0; r < 8; r++)
+      {
+         for (int c = 0; c < 8; c++)
+         {
+            board[r][c] = nullptr;
+         }
+      }
+   }
+   ~BoardDummy() {
+      numMoves = 0;
+      for (int r = 0; r < 8; r++)
+      {
+         for (int c = 0; c < 8; c++)
+         {
+            board[r][c] = nullptr;
+         }
+      }
+   }
 
    void display(const Position& posHover,
-                const Position& posSelect) const          { assert(false); }
-   void move       (const Move& move)                     { assert(false); }
-   int  getCurrentMove() const                            { assert(false); return 0; }
-   bool whiteTurn()      const                            { assert(false); return false; }
+      const Position& posSelect) const {
+      assert(false);
+   }
+   void move(const Move& move) { assert(false); }
+   int  getCurrentMove() const { assert(false); return 0; }
+   bool whiteTurn()      const { assert(false); return false; }
    Piece& operator [] (const Position& pos)
-   { 
-      assert(false); 
+   {
+      assert(false);
       throw true;
    }
-   const Piece& operator [] (const Position& pos) const 
-   { 
-      assert(false); 
+   const Piece& operator [] (const Position& pos) const
+   {
+      assert(false);
       throw true;
    }
 };
@@ -95,7 +116,7 @@ class BoardEmpty : public BoardDummy
 {
    friend TestBoard;
 public:
-   Piece * pSpace;
+   Piece* pSpace;
 
    BoardEmpty();
    ~BoardEmpty();

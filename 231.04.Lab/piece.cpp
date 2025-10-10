@@ -34,4 +34,20 @@ const Piece & Piece::operator = (const Piece & rhs)
 void Piece::getMoves(set <Move> & movesSet, const Board & board) const
 {
 }
+/***************************************************
+ * SPACE
+ * The abstract piece type
+ ***************************************************/
+class Space : public Piece
+{
 
+};
+
+/***************************************************
+ * PIECE DUMMY
+ * The dummy double! - Everything returns FALSE
+ ***************************************************/
+class PieceDummy : public Piece
+{
+
+};

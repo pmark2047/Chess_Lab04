@@ -58,11 +58,11 @@ public:
    virtual const Piece& operator = (const Piece& rhs);
 
    // getters
-   virtual bool operator == (PieceType pt) const { return true;         }
-   virtual bool operator != (PieceType pt) const { return true;         }
-   virtual bool isWhite()                  const { return true;         }
-   virtual bool isMoved()                  const { return true;         }
-   virtual int  getNMoves()                const { return 9999;         }
+   virtual bool operator == (PieceType pt) const { return this->getType() == pt; }
+   virtual bool operator != (PieceType pt) const { return this->getType() != pt; }
+   virtual bool isWhite()                  const { return fWhite;         }
+   virtual bool isMoved()                  const { return nMoves > 0;         }
+   virtual int  getNMoves()                const { return nMoves;         }
    virtual void decrementNMoves()                {                      }
    virtual const Position & getPosition()  const { return Position();   }
    virtual bool justMoved(int currentMove) const { return true;         }
