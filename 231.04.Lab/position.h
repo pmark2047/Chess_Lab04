@@ -42,13 +42,14 @@ class PositionTest;
 class Position
 {
    friend class PositionTest;
-   friend class testPosition;
-   friend class testMove;
-   friend class testKnight;
-   friend class testPiece;
+   friend class TestPosition;
+   friend class TestMove;
+   friend class TestKnight;
+   friend class TestPiece;
    friend class TestBoard;
-   friend class testSpace;
+   friend class TestSpace;
    friend class Piece;
+   friend class Move;
 public:
 
    // Position :    The Position class can work with other positions,

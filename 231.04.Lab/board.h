@@ -42,7 +42,8 @@ class Board
 public:
 
    //constructor
-   Board();
+   Board(ogstream* pgout = nullptr, bool noreset = false);
+   virtual ~Board()  {        };
    // getters
    virtual int  getCurrentMove() const { return numMoves; }
    virtual bool whiteTurn()      const { return getCurrentMove() % 2 == 0; }
