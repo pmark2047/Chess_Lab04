@@ -85,7 +85,7 @@ void TestBoard::move_knightMove()
 void TestBoard::move_knightAttack()
 {  // SETUP
    Move e5c6r;
-   e5c6r.source.colRow = 0x44;
+   e5c6r.source  .colRow = 0x44;
    e5c6r.dest.colRow = 0x25;
    e5c6r.capture = ROOK;
    e5c6r.promote = SPACE;

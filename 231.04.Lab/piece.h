@@ -51,8 +51,8 @@ public:
    friend TestBoard;
    
    // constructors and stuff
-   Piece(const Position & pos, bool isWhite = true)   {}
-   Piece(int c, int r, bool isWhite = true)           {}
+   Piece(const Position& pos, bool isWhite = true) { this->fWhite = isWhite; }
+   Piece(int c, int r, bool isWhite = true) { this->position = (c, r); this->fWhite = isWhite;}
    Piece(const Piece & piece)                         {}
    virtual ~Piece()                                   {}
    virtual const Piece& operator = (const Piece& rhs);
@@ -60,12 +60,12 @@ public:
    // getters
    virtual bool operator == (PieceType pt) const { return this->getType() == pt; }
    virtual bool operator != (PieceType pt) const { return this->getType() != pt; }
-   virtual bool isWhite()                  const { return fWhite;         }
-   virtual bool isMoved()                  const { return nMoves > 0;         }
-   virtual int  getNMoves()                const { return nMoves;         }
+   virtual bool isWhite()                  const { return fWhite;       }
+   virtual bool isMoved()                  const { return nMoves > 0;   }
+   virtual int  getNMoves()                const { return nMoves;       }
    virtual void decrementNMoves()                {                      }
    virtual const Position & getPosition()  const { return Position();   }
-   virtual bool justMoved(int currentMove) const { return true;         }
+   virtual bool justMoved(int currentMove) const { return lastMove == 1;}
 
    // setter
    virtual void setLastMove(int currentMove)     {                      }
@@ -94,9 +94,9 @@ class PieceDerived : public Piece
 public:
    PieceDerived(const Position& pos, bool isWhite) : Piece(9, 9) { }
    PieceDerived(int c, int r, bool isWhite) : Piece(9, 9)        { }
-   ~PieceDerived()                                                       { }
-   PieceType getType()            const     { return SPACE;                }
-   void display(ogstream* pgout)  const     { assert(false);               }
+   ~PieceDerived()                                               { }
+   PieceType getType()            const     { return SPACE;        }
+   void display(ogstream* pgout)  const     { assert(false);       }
 };
 
 
@@ -151,8 +151,7 @@ public:
 class PieceSpy : public PieceDummy
 {
 public:
-   PieceSpy(int c, int r, bool f = true, PieceType pt = SPACE) 
-      : PieceDummy(c, r, f), pt(pt)
+   PieceSpy(int c, int r, bool f = true, PieceType pt = SPACE) : PieceDummy(c, r, f), pt(pt)
    {
       numConstruct++;
    }

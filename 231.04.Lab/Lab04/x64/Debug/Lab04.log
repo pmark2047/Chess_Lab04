@@ -1,6 +1,7 @@
 ﻿  board.cpp
   chess.cpp
 C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\board.cpp(39,17): error C2061: syntax error: identifier 'Space'
+  move.cpp
 C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\chess.cpp(62,15): error C2665: 'Board::Board': no overloaded function could convert all the argument types
       C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\board.h(57,1):
       could be 'Board::Board(Board &&)'
@@ -26,6 +27,8 @@ C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\piece.cpp(50,7): error C2011:
       C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\piece.h(108,7):
       see declaration of 'PieceDummy'
   
+  pieceKnight.cpp
+  test.cpp
   testBoard.cpp
 C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\testBoard.cpp(38,15): error C2248: 'Position::colRow': cannot access private member declared in class 'Position'
       C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\position.h(175,12):
@@ -67,9 +70,9 @@ C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\testKnight.cpp(36,19): error 
       see declaration of 'Position'
   
 C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\testKnight.cpp(44,9): error C2248: 'Move::source': cannot access private member declared in class 'Move'
-      C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\move.h(42,14):
+      C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\move.h(77,14):
       see declaration of 'Move::source'
-      C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\move.h(24,7):
+      C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\move.h(25,7):
       see declaration of 'Move'
   
 C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\testKnight.cpp(44,16): error C2248: 'Position::colRow': cannot access private member declared in class 'Position'
@@ -79,9 +82,9 @@ C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\testKnight.cpp(44,16): error 
       see declaration of 'Position'
   
 C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\testKnight.cpp(45,9): error C2248: 'Move::dest': cannot access private member declared in class 'Move'
-      C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\move.h(43,14):
+      C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\move.h(78,14):
       see declaration of 'Move::dest'
-      C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\move.h(24,7):
+      C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\move.h(25,7):
       see declaration of 'Move'
   
 C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\testKnight.cpp(45,14): error C2248: 'Position::colRow': cannot access private member declared in class 'Position'
@@ -91,15 +94,15 @@ C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\testKnight.cpp(45,14): error 
       see declaration of 'Position'
   
 C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\testKnight.cpp(46,9): error C2248: 'Move::capture': cannot access private member declared in class 'Move'
-      C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\move.h(45,14):
+      C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\move.h(80,14):
       see declaration of 'Move::capture'
-      C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\move.h(24,7):
+      C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\move.h(25,7):
       see declaration of 'Move'
   
 C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\testKnight.cpp(48,8): error C2248: 'Move::source': cannot access private member declared in class 'Move'
-      C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\move.h(42,14):
+      C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\move.h(77,14):
       see declaration of 'Move::source'
-      C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\move.h(24,7):
+      C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\move.h(25,7):
       see declaration of 'Move'
   
 C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\testKnight.cpp(48,15): error C2248: 'Position::colRow': cannot access private member declared in class 'Position'
@@ -109,9 +112,9 @@ C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\testKnight.cpp(48,15): error 
       see declaration of 'Position'
   
 C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\testKnight.cpp(49,8): error C2248: 'Move::dest': cannot access private member declared in class 'Move'
-      C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\move.h(43,14):
+      C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\move.h(78,14):
       see declaration of 'Move::dest'
-      C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\move.h(24,7):
+      C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\move.h(25,7):
       see declaration of 'Move'
   
 C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\testKnight.cpp(49,13): error C2248: 'Position::colRow': cannot access private member declared in class 'Position'
@@ -121,12 +124,15 @@ C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\testKnight.cpp(49,13): error 
       see declaration of 'Position'
   
 C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\testKnight.cpp(50,8): error C2248: 'Move::capture': cannot access private member declared in class 'Move'
-      C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\move.h(45,14):
+      C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\move.h(80,14):
       see declaration of 'Move::capture'
-      C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\move.h(24,7):
+      C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\move.h(25,7):
       see declaration of 'Move'
   
+  testMove.cpp
   testPiece.cpp
   uiInteract.cpp
   Generating Code...
 C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\piece.h(67,1): warning C4172: returning address of local variable or temporary 
+C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\piece.h(67,1): warning C4172: returning address of local variable or temporary 
+C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\move.cpp(233,1): warning C4715: 'Move::letterFromRow': not all control paths return a value
