@@ -204,7 +204,7 @@ char Move::letterDetermine()
 	}
 	else
 	{
-		return ' o';
+		return 'o';
 	}
 }
 
@@ -230,4 +230,5 @@ char Move::letterFromRow(int row)
 	{
 		return 'e';
 	}
+   return 'a'; // temp fix
 }

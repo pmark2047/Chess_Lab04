@@ -11,6 +11,7 @@
 #include "position.h"
 #include "piece.h"
 #include <cassert>
+#include "pieceSpace.h"
 using namespace std;
 
 
@@ -36,7 +37,7 @@ Piece& Board::operator [] (const Position& pos)
  *********************************************/
 BoardEmpty::BoardEmpty() : BoardDummy(), pSpace(nullptr)
 {
-   pSpace = new Space;
+   //pSpace = new Space;
 }
 BoardEmpty::~BoardEmpty()
 {
