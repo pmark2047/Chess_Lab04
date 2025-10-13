@@ -20,7 +20,17 @@
   **************************************/
 void TestMove::constructor_default()
 {
-   assertUnit(NOT_YET_IMPLEMENTED);
+   // SETUP
+   // EXERCISE
+   Move moveTest; // default constructor
+   // VERIFY
+   assertUnit(0xff == moveTest.source.colRow);
+   assertUnit(0xff == moveTest.dest.colRow);
+   assertUnit(SPACE == moveTest.promote);
+   assertUnit(SPACE == moveTest.capture);
+   assertUnit(Move::MOVE  == moveTest.moveType);
+   assertUnit(true == moveTest.isWhite);
+   // TEARDOWN
 }
 
 /*************************************
@@ -32,7 +42,17 @@ void TestMove::constructor_default()
  **************************************/
 void TestMove::constructString_simple()
 {
-   assertUnit(NOT_YET_IMPLEMENTED);
+   // SETUP
+   // EXERCISE
+   Move move("e5e6");
+   // VERIFY
+   assertUnit(0x44 == move.source.colRow);
+   assertUnit(0x45 == move.dest.colRow);
+   assertUnit(SPACE == move.promote);
+   assertUnit(SPACE == move.capture);
+   assertUnit(Move::MOVE == move.moveType);
+   assertUnit(true == move.isWhite);
+   // TEARDOWN
 }
 
 
@@ -45,7 +65,25 @@ void TestMove::constructString_simple()
  **************************************/
 void TestMove::read_simple()
 {
-   assertUnit(NOT_YET_IMPLEMENTED);
+   // SETUP
+   Move move;
+   move.source.colRow   = 0xff;
+   move.dest.colRow     = 0xff;
+   move.promote   = KNIGHT;
+   move.capture   = BISHOP;
+   move.moveType  = Move::MOVE_ERROR;
+   move.isWhite   = false;
+   move.text      = "ERROR";
+   // EXERCISE
+   move.read(string("e5e6"));
+   // VERIFY
+   assertUnit(0x44   == move.source.colRow);
+   assertUnit(0x45   == move.dest.colRow);
+   assertUnit(SPACE  == move.promote);
+   assertUnit(SPACE  == move.capture);
+   assertUnit(Move::MOVE == move.moveType);
+   assertUnit(false == move.isWhite);
+   // TEARDOWN
 }
 
 /*************************************
@@ -58,7 +96,25 @@ void TestMove::read_simple()
  **************************************/
 void TestMove::read_capture()
 {
-   assertUnit(NOT_YET_IMPLEMENTED);
+   // SETUP
+   Move move;
+   move.source.colRow = 0xff;
+   move.dest.colRow = 0xff;
+   move.promote   = KNIGHT;
+   move.capture   = BISHOP;
+   move.moveType  = Move::MOVE_ERROR;
+   move.isWhite   = false;
+   move.text      = "ERROR";
+   // EXERCISE
+   move.read(string("e5e6r"));
+   // VERIFY
+   assertUnit(0x44   == move.source.colRow);
+   assertUnit(0x45   == move.dest.colRow);
+   assertUnit(SPACE  == move.promote);
+   assertUnit(ROOK   == move.capture);
+   assertUnit(Move::MOVE == move.moveType);
+   assertUnit(false  == move.isWhite);
+   // TEARDOWN
 }
 
 /*************************************
@@ -70,7 +126,26 @@ void TestMove::read_capture()
  **************************************/
 void TestMove::read_enpassant()
 {
-   assertUnit(NOT_YET_IMPLEMENTED);
+   // SETUP
+   Move move;
+   move.source.colRow   = 0xff;
+   move.dest.colRow     = 0xff;
+   move. promote  = KNIGHT;
+   move.capture   = BISHOP;
+   move.moveType  = Move::MOVE_ERROR;
+   move.isWhite   = false;
+   move.text      = "ERROR";
+   // EXERCISE
+   move.read(string("e5f6E"));
+   // VERIFY
+   assertUnit(0x44 == move.source.colRow);
+   assertUnit(0x45 == move.dest.colRow);
+   assertUnit(SPACE  == move.promote);
+   assertUnit(SPACE  == move.capture);
+   assertUnit(Move::ENPASSANT == move.moveType);
+   assertUnit(false == move.isWhite);
+   
+   // TEARDOWN
 }
 
 /*************************************

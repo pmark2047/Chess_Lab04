@@ -117,7 +117,41 @@ void TestKnight::getMoves_capture()
  **************************************/
 void TestKnight::getMoves_free()
 {
-   assertUnit(NOT_YET_IMPLEMENTED);
+   // SETUP
+   BoardEmpty board;
+   Knight knight(7, 7, false /*white*/);
+   knight.fWhite = true;
+   knight.position.colRow = 0x34;
+   set <Move> moves;
+   Move d5b6, d5c7, d5e7, d5f6, d5b4, d5c3, d5e3, d5f4;
+   d5b6.source.colRow = d5c7.source.colRow = d5e7.source.colRow =
+      d5f6.source.colRow = d5b4.source.colRow = d5c3.source.colRow =
+      d5e3.source.colRow = d5f4.source.colRow = 0x34;
+   d5b6.capture = d5c7.capture = d5e7.capture = d5f6.capture =
+   d5b4.capture = d5c3.capture = d5e3.capture = d5f4.capture = SPACE;
+   d5b6.dest.colRow = 0x15;
+   d5c7.dest.colRow = 0x26;
+   d5e7.dest.colRow = 0x46;
+   d5f6.dest.colRow = 0x55;
+   d5b4.dest.colRow = 0x13;
+   d5c3.dest.colRow = 0x22;
+   d5e3.dest.colRow = 0x42;
+   d5f4.dest.colRow = 0x53;
+   // EXERCISE
+   knight.getMoves(moves, board);
+   
+   // VERIFY
+   assertUnit(moves.size() == 8);   // many possible moves
+   assertUnit(moves.find(d5b6) != moves.end());
+   assertUnit(moves.find(d5c7) != moves.end());
+   assertUnit(moves.find(d5e7) != moves.end());
+   assertUnit(moves.find(d5f6) != moves.end());
+   assertUnit(moves.find(d5b4) != moves.end());
+   assertUnit(moves.find(d5c3) != moves.end());
+   assertUnit(moves.find(d5e3) != moves.end());
+   assertUnit(moves.find(d5f4) != moves.end());
+   
+   // TEARDOWN
 }
 
 

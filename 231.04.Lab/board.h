@@ -11,6 +11,9 @@
 
 #include <cassert>
 #include "move.h"   // Because we return a set of Move
+#include "uiDraw.h"
+#include "piece.h"
+#include "pieceSpace.h"
 
 class ogstream;
 class TestPawn;
@@ -31,6 +34,8 @@ class Piece;
  **************************************************/
 class Board
 {
+
+public:
    friend TestPawn;
    friend TestKnight;
    friend TestBishop;
@@ -39,24 +44,34 @@ class Board
    friend TestKing;
    friend TestBoard;
 
-public:
-
    //constructor
    Board(ogstream* pgout = nullptr, bool noreset = false);
    virtual ~Board()  {        };
+   
    // getters
    virtual int  getCurrentMove() const { return numMoves; }
    virtual bool whiteTurn()      const { return getCurrentMove() % 2 == 0; }
-   virtual void display(const Position& posHover, const Position& posSelect) const {}
+   virtual void display(const Position& posHover, const Position& posSelect) const;
    virtual const Piece& operator [] (const Position& pos) const;
 
    // setters
-   virtual void move(const Move& move) {}
+   virtual void move(const Move & move);
    virtual Piece& operator [] (const Position& pos);
+   
+   void free();
+   void reset(bool fFree);
+   Piece* factory(PieceType pt, int col, int row)
+   {
+      // stub for factory
+      return new Space(col, row);
+   }
 
 protected:
+   void assertBoard();
    int numMoves;
-   Piece* board[8][8];    // the board of chess pieces
+   Piece * board[8][8];    // the board of chess pieces
+   ogstream* pgout;
+   
 };
 
 

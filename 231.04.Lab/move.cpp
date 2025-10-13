@@ -20,7 +20,7 @@ using namespace std;
  ***************************************************/
 Move::Move() {}
 
-char Move::letterFromPieceType(PieceType pt) {
+char Move::letterFromPieceType(PieceType pt) const{
 	if (pt == PAWN)
 	{
 		return 'p';
@@ -52,7 +52,7 @@ char Move::letterFromPieceType(PieceType pt) {
 }
 
 
-PieceType Move::pieceTypeFromLetter(char letter)
+PieceType Move::pieceTypeFromLetter(char letter) const
 {
 	if (letter == 'p')
 	{

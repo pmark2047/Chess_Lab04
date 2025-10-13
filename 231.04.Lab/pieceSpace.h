@@ -21,7 +21,7 @@ class Space : public Piece
 {
    friend TestSpace;
 public:
-   Space(int c, int r) : Piece(9, 9)   {               }
+   Space(int c, int r) : Piece(c, r)   {               }
    ~Space()                            {               }
    PieceType getType()           const { return SPACE; }
    void display(ogstream* pgout) const {               }

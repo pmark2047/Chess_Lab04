@@ -17,11 +17,15 @@
   ***************************************************/
 class Knight : public Piece
 {
-public:
-   Knight(const Position& pos, bool isWhite) : Piece(10,10,true) { }
-   Knight(int c, int r, bool isWhite) : Piece(10, 10, true) { }
+   public:
+   Knight(const Position& pos, bool isWhite) : Piece(pos,   isWhite) { }
+   Knight(int c, int r,        bool isWhite) : Piece(c, r,  isWhite) { }
    ~Knight() {                }
    PieceType getType()            const { return KNIGHT; }
    void getMoves(set <Move>& moves, const Board& board) const;
    void display(ogstream* pgout)  const;
+   private:
+   set <Move> getMovesNoslide(const Board& board,
+                              const Delta deltas[],
+                              int numDelta) const;
 };
