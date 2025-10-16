@@ -49,13 +49,15 @@ void Board::free()
 void Board::reset(bool fFree)
 {
    // free up allocated memory if commanded to
-   if (fFree)
+   if (fFree) {
       free();
+   } else {
+      // free everything
+      for (int r = 0; r < 8; r++)
+         for (int c = 0; c < 8; c++)
+            board[c][r] = nullptr;
+   }
    
-   // free everything
-   for (int r = 0; r < 8; r++)
-      for (int c = 0; c < 8; c++)
-         board[c][r] = nullptr;
    // create four knights
    board[1][0] = new Knight(1, 0, true /*isWhite*/);
    board[6][0] = new Knight(6, 0, true /*isWhite*/);
@@ -96,6 +98,7 @@ void Board::assertBoard()
                board[c][r]->getType() == PAWN);
          }
 #endif // NDEBUG
+ 
 }
 
 

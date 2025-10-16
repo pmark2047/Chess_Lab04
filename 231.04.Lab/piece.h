@@ -57,7 +57,6 @@ public:
    fWhite(isWhite), nMoves(0), position(c, r), lastMove(-1) {}
    Piece(const Piece & piece)    { *this= piece; }
    virtual ~Piece()                                   {}
-   virtual const Piece& operator = (const Piece& rhs);
 
    // getters
    virtual bool operator == (PieceType pt) const { return getType() == pt;       }
@@ -73,6 +72,7 @@ public:
    }
 
    // setter
+   Piece & operator = (const Piece& rhs);
    virtual void setLastMove(int currentMove) { lastMove = currentMove; nMoves++; }
 
    // overwritten by the various pieces

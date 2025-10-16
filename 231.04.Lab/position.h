@@ -54,7 +54,7 @@ public:
 
    // Position :    The Position class can work with other positions,
    //               Allowing for comparisions, copying, etc.
-   Position(const Position & rhs) {              }
+   Position(const Position & rhs) { setCol(rhs.getCol()); setRow(rhs.getRow()); }
    Position() : colRow(0xff)      {              }
    bool isInvalid() const         { return !isValid(); }
    bool isValid()   const         { return (getCol() >= 0 && getCol() < 8) &&
@@ -76,7 +76,7 @@ public:
    
    // Row/Col : The position class can work with row/column,
    //           which are 0..7 and 0...7
-   Position(int c, int r) : colRow(0x00)  {           }
+   Position(int c, int r) : colRow(0x00)  { setCol(c); setRow(r); }
    virtual int getCol() const                     {
                                                    if (((colRow >> 4) & 0x0F ) >= 8||((colRow & 0x0F) >= 8))
                                                    {

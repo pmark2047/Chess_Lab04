@@ -59,6 +59,7 @@ public:
    virtual Piece& operator [] (const Position& pos);
    
    void free();
+   
    void reset(bool fFree);
    Piece* factory(PieceType pt, int col, int row)
    {

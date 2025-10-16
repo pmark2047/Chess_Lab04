@@ -21,9 +21,13 @@ using namespace std;
 /************************************************
  * PIECE : ASSIGN
  ***********************************************/
-const Piece & Piece::operator = (const Piece & rhs)
+Piece & Piece::operator = (const Piece& rhs)
 {
-
+   this->nMoves = rhs.nMoves;
+   this->fWhite = rhs.fWhite;
+   this->position = rhs.position;
+   this->lastMove = rhs.lastMove;
+   
    return *this;
 }
 
@@ -33,4 +37,5 @@ const Piece & Piece::operator = (const Piece & rhs)
  ***********************************************/
 void Piece::getMoves(set <Move> & movesSet, const Board & board) const
 {
+   
 }
