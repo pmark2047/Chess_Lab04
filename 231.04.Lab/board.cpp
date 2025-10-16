@@ -161,16 +161,16 @@ void Board::move(const Move & move)
       case Move::MOVE:
       {
          //create new pieces
-         PieceType ptNew = move.getPromotion() == SPACE ? pSrc->getType() :
-                                                      move.getPromotion();
+         //PieceType ptNew = move.getPromotion() == SPACE ? pSrc->getType() :
+                                                      //move.getPromotion();
          Piece * pSpace = new Space(src.getCol(), src.getRow());
-         Piece * pNew   = factory(ptNew, des.getCol(), des.getRow());
-         *pNew = *pSrc;
-         pNew->setLastMove(getCurrentMove());
+//         Piece * pNew   = factory(ptNew, des.getCol(), des.getRow());
+//         *pNew = *pSrc;
+//         pNew->setLastMove(getCurrentMove());
          
          // set the board
          board[src.getCol()][src.getRow()] = pSpace;
-         board[des.getCol()][des.getRow()] = pNew;
+         board[des.getCol()][des.getRow()] = pSrc;
          
          // increment the number of moves
          numMoves++;
