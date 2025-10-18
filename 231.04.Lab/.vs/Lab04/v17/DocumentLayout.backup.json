@@ -46,8 +46,7 @@
               "RelativeToolTip": "testKnight.h",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAABwAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-10-18T04:31:52.638Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-18T04:31:52.638Z"
             },
             {
               "$type": "Document",
@@ -59,8 +58,7 @@
               "RelativeToolTip": "board.h",
               "ViewState": "AgIAADkAAAAAAAAAAAAAAD8AAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-10-18T04:11:38.43Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-18T04:11:38.43Z"
             },
             {
               "$type": "Document",
@@ -72,8 +70,7 @@
               "RelativeToolTip": "position.h",
               "ViewState": "AgIAAC0AAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-10-17T22:48:46.541Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-17T22:48:46.541Z"
             },
             {
               "$type": "Document",
@@ -85,8 +82,7 @@
               "RelativeToolTip": "pieceKnight.h",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-10-17T22:46:44.639Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-17T22:46:44.639Z"
             },
             {
               "$type": "Document",
@@ -96,7 +92,7 @@
               "RelativeDocumentMoniker": "testKnight.cpp",
               "ToolTip": "C:\\Users\\jacks\\source\\repos\\Chess_Lab04\\231.04.Lab\\testKnight.cpp",
               "RelativeToolTip": "testKnight.cpp",
-              "ViewState": "AgIAANIAAAAAAAAAAAAAAMAAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMAAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-10-17T22:24:31.56Z",
               "EditorCaption": ""
@@ -111,8 +107,7 @@
               "RelativeToolTip": "pieceKnight.cpp",
               "ViewState": "AgIAABcAAAAAAAAAAADwvygAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-10-17T22:47:41.012Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-17T22:47:41.012Z"
             }
           ]
         }
