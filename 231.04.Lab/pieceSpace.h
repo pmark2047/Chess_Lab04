@@ -21,6 +21,7 @@ class Space : public Piece
 {
    friend TestSpace;
 public:
+   Space() : Piece(0,0)                {               }
    Space(int c, int r) : Piece(c, r)   {               }
    ~Space()                            {               }
    PieceType getType()           const { return SPACE; }

@@ -50,6 +50,7 @@ class Position
    friend class TestSpace;
    friend class Piece;
    friend class Move;
+   friend class TestKing;
 public:
 
    // Position :    The Position class can work with other positions,
@@ -69,7 +70,7 @@ public:
    
    // Location : The Position class can work with locations, which
    //            are 0...63 where we start in row 0, then row 1, etc.
-   Position(int location) : colRow(0x99) { }
+   Position(int location) : colRow(0xff) { }
    int getLocation() const               { return (getRow() * 8) + getCol(); }
    void setLocation(int location)        {           }
 

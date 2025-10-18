@@ -14,6 +14,11 @@
 #include <cassert>
 #include "pieceSpace.h"
 #include "pieceKnight.h"
+#include "pieceRook.h"
+#include "pieceBishop.h"
+#include "pieceKing.h"
+#include "pieceQueen.h"
+#include "piecePawn.h"
 using namespace std;
 
 /***********************************************
@@ -63,6 +68,45 @@ void Board::reset(bool fFree)
    board[6][0] = new Knight(6, 0, true /*isWhite*/);
    board[1][7] = new Knight(1, 7, false /*isWhite*/);
    board[6][7] = new Knight(6, 7, false /*isWhite*/);
+   
+   // create four rooks
+   board[0][0] = new Rook(0, 0, true /*isWhite*/);
+   board[7][0] = new Rook(7, 0, true /*isWhite*/);
+   board[0][7] = new Rook(0, 7, false /*isWhite*/);
+   board[7][7] = new Rook(7, 7, false /*isWhite*/);
+   
+   // create four bishops
+   board[2][0] = new Bishop(2, 0, true /*isWhite*/);
+   board[5][0] = new Bishop(5, 0, true /*isWhite*/);
+   board[2][7] = new Bishop(2, 7, false /*isWhite*/);
+   board[5][7] = new Bishop(5, 7, false /*isWhite*/);
+   
+   // create sixteen pawns
+   board[0][1] = new Pawn(0, 1, true /*isWhite*/);
+   board[1][1] = new Pawn(1, 1, true /*isWhite*/);
+   board[2][1] = new Pawn(2, 1, true /*isWhite*/);
+   board[3][1] = new Pawn(3, 1, true /*isWhite*/);
+   board[4][1] = new Pawn(4, 1, true /*isWhite*/);
+   board[5][1] = new Pawn(5, 1, true /*isWhite*/);
+   board[6][1] = new Pawn(6, 1, true /*isWhite*/);
+   board[7][1] = new Pawn(7, 1, true /*isWhite*/);
+   
+   board[0][6] = new Pawn(0, 6, false /*isWhite*/);
+   board[1][6] = new Pawn(1, 6, false /*isWhite*/);
+   board[2][6] = new Pawn(2, 6, false /*isWhite*/);
+   board[3][6] = new Pawn(3, 6, false /*isWhite*/);
+   board[4][6] = new Pawn(4, 6, false /*isWhite*/);
+   board[5][6] = new Pawn(5, 6, false /*isWhite*/);
+   board[6][6] = new Pawn(6, 6, false /*isWhite*/);
+   board[7][6] = new Pawn(7, 6, false /*isWhite*/);
+   
+   // create the 2 queens (ladies first)
+   board[3][0] = new Queen(3, 0, true /*isWhite*/);
+   board[3][7] = new Queen(3, 7, false /*isWhite*/);
+   
+   // create the 2 kings
+   board[4][0] = new King(4, 0, true /*isWhite*/);
+   board[4][7] = new King(4, 7, false /*isWhite*/);
    
    // everything else is a space
    for (int r = 0; r < 8; r++)
@@ -198,9 +242,14 @@ void Board::move(const Move & move)
  *********************************************/
 BoardEmpty::BoardEmpty() : BoardDummy(), pSpace(nullptr)
 {
-   //pSpace = new Space;
+   for (int r = 0; r < 8; r++)
+      for (int c =0; c < 8; c++)
+         if (nullptr == board[c][r])
+            board[c][r] = new Space(c, r);
 }
 BoardEmpty::~BoardEmpty()
 {
-   delete pSpace;
+   for (int r = 0; r < 8; r++)
+      for (int c =0; c < 8; c++)
+         delete board[c][r];
 }

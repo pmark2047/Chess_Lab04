@@ -100,5 +100,14 @@ void TestRook::getMoves_slideToCapture()
  **************************************/
 void TestRook::getType()
 {
-   assertUnit(NOT_YET_IMPLEMENTED);
-}
+
+   // SETUP
+   const Rook rook(7, 7, false /*white*/);
+   PieceType pt = SPACE;
+
+   // EXERCISE
+   pt = rook.getType();
+
+   // VERIFY
+   assertUnit(pt == ROOK);
+}  // TEARDOWN

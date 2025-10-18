@@ -100,5 +100,14 @@ void TestQueen::getMoves_slideToCapture()
  **************************************/
 void TestQueen::getType()
 {
-   assertUnit(NOT_YET_IMPLEMENTED);
-}
+
+   // SETUP
+   const Queen queen(7, 7, false /*white*/);
+   PieceType pt = SPACE;
+
+   // EXERCISE
+   pt = queen.getType();
+
+   // VERIFY
+   assertUnit(pt == QUEEN);
+}  // TEARDOWN

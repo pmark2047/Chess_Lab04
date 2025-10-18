@@ -30,6 +30,7 @@ public:
    friend TestMove;
    friend TestBoard;
    friend class TestKnight;
+   friend class TestKing;
 
    // constructor
    Move();
@@ -69,8 +70,14 @@ public:
    {
       text = move;
       moveType = MOVE;
-      source = (rowFromLetter(move[0]), move[1]);
-      dest = (rowFromLetter(move[2]), move[3]);
+      int sRow = rowFromLetter(move[0]);
+      int sCol = move[1] - '0';
+      sCol -= 1;
+      source.set(sRow, sCol);
+      int dRow = rowFromLetter(move[2]);
+      int dCol = move[3] - '0';
+      dCol -= 1;
+      dest.set(dRow, dCol);
       lastLetterDetermine(move[4]);
    }
    // getters

@@ -92,35 +92,35 @@ int Move::rowFromLetter(char letter)
 {
 	if (letter == 'a')
 	{
-		return 1;
+		return 0;
 	}
 	else if (letter == 'b')
 	{
-		return 2;
+		return 1;
 	}
 	else if (letter == 'c')
 	{
-		return 3;
+		return 2;
 	}
 	else if (letter == 'd')
 	{
-		return 4;
+		return 3;
 	}
 	else if (letter == 'e')
 	{
-		return 5;
+		return 4;
 	}
 	else if (letter == 'f')
 	{
-		return 6;
+		return 5;
 	}
 	else if (letter == 'g')
 	{
-		return 7;
+		return 6;
 	}
 	else if (letter == 'h')
 	{
-		return 8;
+		return 7;
 	}
 	else
 	{

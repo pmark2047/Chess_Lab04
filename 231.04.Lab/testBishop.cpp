@@ -101,5 +101,14 @@ void TestBishop::getMoves_slideToCapture()
  **************************************/
 void TestBishop::getType()
 {
-   assertUnit(NOT_YET_IMPLEMENTED);
-}
+
+   // SETUP
+   const Bishop bishop(7, 7, false /*white*/);
+   PieceType pt = SPACE;
+
+   // EXERCISE
+   pt = bishop.getType();
+
+   // VERIFY
+   assertUnit(pt == BISHOP);
+}  // TEARDOWN

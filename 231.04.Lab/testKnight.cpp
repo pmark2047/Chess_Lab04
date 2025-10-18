@@ -68,7 +68,7 @@ void TestKnight::getMoves_blocked()
  **************************************/
 void TestKnight::getMoves_capture()
 {
-   Board board;
+   BoardEmpty board;
    Knight knight(7, 7, false /*white*/);
    Black b1(PAWN), b2(PAWN), b3(PAWN), b4(PAWN), b5(PAWN), b6(PAWN), b7(PAWN), b8(PAWN);
    knight.fWhite = true;
@@ -141,7 +141,7 @@ void TestKnight::getMoves_free()
 {
 
    // SETUP
-   Board board;
+   BoardEmpty board;
    Knight knight(7, 7, false /*white*/);
    knight.fWhite = true;
    knight.position.colRow = 0x34;
@@ -198,7 +198,7 @@ void TestKnight::getMoves_free()
 void TestKnight::getMoves_end()
 {
    // SETUP
-   Board board;
+   BoardEmpty board;
    Knight knight(7, 7, false /*white*/); // we will reset all this.
    knight.fWhite = true;
    knight.position.colRow = 0x60;

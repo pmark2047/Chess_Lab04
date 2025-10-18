@@ -70,7 +70,33 @@ void TestKing::getMoves_capture()
  **************************************/
 void TestKing::getMoves_free()
 {
-   assertUnit(NOT_YET_IMPLEMENTED);
+
+   // SETUP
+   Board board;
+   King king(7, 7, false /*white*/);
+   king.fWhite = true;
+   king.position.colRow = 0x34;
+   set <Move> moves;
+   Move d5e5, d5e6, d5d6, d5c6, d5c5, d5c4, d5d4, d5e4;
+   d5e5.source.colRow = d5e6.source.colRow = d5d6.source.colRow =
+      d5c5.source.colRow = d5c4.source.colRow = d5c4.source.colRow =
+      d5d4.source.colRow = d5e4.source.colRow = 0x34;
+   d5e5.capture = d5e6.capture = d5d6.capture = d5c5.capture =
+      d5c4.capture = d5c4.capture = d5d4.capture = d5e4.capture = SPACE;
+
+   // EXERCISE
+   king.getMoves(moves, board);
+
+   // VERIFY
+   assertUnit(moves.size() == 8);   // many possible moves
+   assertUnit(moves.find(d5e5) != moves.end());
+   assertUnit(moves.find(d5e6) != moves.end());
+   assertUnit(moves.find(d5d6) != moves.end());
+   assertUnit(moves.find(d5c6) != moves.end());
+   assertUnit(moves.find(d5c5) != moves.end());
+   assertUnit(moves.find(d5c4) != moves.end());
+   assertUnit(moves.find(d5d4) != moves.end());
+   assertUnit(moves.find(d5e4) != moves.end());
 }
 
 
@@ -180,7 +206,16 @@ void TestKing::getMoves_whiteCastleRookMoved()
  **************************************/
 void TestKing::getType()
 {
-   assertUnit(NOT_YET_IMPLEMENTED);
-}
+
+   // SETUP
+   const King king(7, 7, false /*white*/);
+   PieceType pt = SPACE;
+
+   // EXERCISE
+   pt = king.getType();
+
+   // VERIFY
+   assertUnit(pt == KING);
+}  // TEARDOWN
 
 
