@@ -22,7 +22,6 @@ public:
 
    void run()
    {
-      std::cout << "TestKnight Runs" << "\n";
       getMoves_blocked(); 
       getMoves_capture();
       getMoves_free();
