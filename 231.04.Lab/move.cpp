@@ -45,6 +45,10 @@ char Move::letterFromPieceType(PieceType pt) const{
 	{
 		return 'n';
 	}
+	else if (pt == SPACE)
+	{
+		return ' ';
+	}
 	else
 	{
 		return 'z';
@@ -202,6 +206,10 @@ char Move::letterDetermine()
 	{
 		return 'k';
 	}
+	else if (capture == SPACE)
+	{
+		return 'o';
+	}
 	else
 	{
 		return 'o';
@@ -230,5 +238,20 @@ char Move::letterFromRow(int row)
 	{
 		return 'e';
 	}
-   return 'a'; // temp fix
+	else if (row == 6)
+	{
+		return 'f';
+	}
+	else if (row == 7)
+	{
+		return 'g';
+	}
+	else if (row == 8)
+	{
+		return 'h';
+	}
+	else
+	{
+		return 'o';
+	}
 }

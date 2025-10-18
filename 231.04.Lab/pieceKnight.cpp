@@ -20,7 +20,6 @@ void Knight::display(ogstream* pgout) const
    pgout->drawKnight(position, !isWhite());
 }
 
-
 /***************************************************
 * PIECE : GEN MOVES NO SLIDE
 *         From a list of deltas, find all the
@@ -35,6 +34,11 @@ set <Move> Knight::getMovesNoslide(const Board &board,
    {
       Position posMove(position, deltas[i]);
       // capture if there is a piece at the end of the slide
+      if (!posMove.isValid())
+      {
+         continue;
+      }
+
       if (posMove.isValid() &&
           (board[posMove].isWhite() != fWhite || board[posMove] == SPACE))
       {
@@ -64,7 +68,6 @@ void Knight::getMoves(set <Move>& moves, const Board& board) const
                {-1,-2}, { 1,-2}
    };
    
-   moves = getMovesNoslide(board,
-                           delta, sizeof(delta) / sizeof(delta[0]));
+   moves = getMovesNoslide(board, delta, sizeof(delta) / sizeof(delta[0]));
 
 }

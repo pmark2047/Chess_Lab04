@@ -22,11 +22,11 @@ public:
 
    void run()
    {
-      getMoves_blocked();
+      std::cout << "TestKnight Runs" << "\n";
+      getMoves_blocked(); 
       getMoves_capture();
       getMoves_free();
       getMoves_end();
-
       getType();
       
       report("Knight");

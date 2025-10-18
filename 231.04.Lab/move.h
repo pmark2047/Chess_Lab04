@@ -37,14 +37,45 @@ public:
    {
       *this = rhs;
    }
-   Move(const char * s, bool isW = true) : promote(SPACE), capture(SPACE), isWhite(isW), moveType(MOVE)
-   {
-      *this = s;
-   }
 
+   Move(Position source, Position dest, MoveType moveType, PieceType capture)
+   {
+      this->source = source;
+      this->dest = dest;
+      this->moveType = moveType;
+      this->capture = capture;
+
+      int x1 = source.getCol();
+      int y1 = source.getRow();
+      int x2 = dest.getCol();
+      int y2 = dest.getRow();
+
+      string newText;
+      char letter = letterDetermine();
+      std::stringstream ss;
+
+      if (letter != 'o')
+      {
+         ss << letterFromRow(x1) << y1 << letterFromRow(x2) << y2 << letter;
+      }
+      else
+      {
+         ss << letterFromRow(x1) << y1 << letterFromRow(x2) << y2;
+      }
+
+      text = ss.str();
+   }
+   Move(string move)
+   {
+      text = move;
+      moveType = MOVE;
+      source = (rowFromLetter(move[0]), move[1]);
+      dest = (rowFromLetter(move[2]), move[3]);
+      lastLetterDetermine(move[4]);
+   }
    // getters
    string getText()              const { return text; };
-   const Position & getDes()    const { return dest;    }
+   const Position & getDes()     const { return dest;    }
    const Position & getSrc()     const { return source;  }
    PieceType getPromotion()      const { return promote; }
    PieceType getCapture()        const { return capture; }
@@ -67,7 +98,7 @@ public:
    void setCapture(PieceType pt)       { capture   = pt;          update(); }
    void setWhiteMove(bool f)           { isWhite   = f;           update(); }
    void setSrc(const Position & src)   { source    = src;         update(); }
-   void setDes(const Position & des)  { dest      = des;         update(); }
+   void setDes(const Position & des)   { dest      = des;         update(); }
    void setEnPassant()                 { moveType  = ENPASSANT;   update(); }
    void setPromote(PieceType pt)       { promote   = pt;          update(); }
    void setCastle(bool isKing)

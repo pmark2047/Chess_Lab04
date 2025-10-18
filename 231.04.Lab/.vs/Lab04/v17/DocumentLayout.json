@@ -3,36 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\jacks\\source\\repos\\Chess_Lab04\\231.04.Lab\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A9E47F2C-242D-4AB1-90EC-058438EF136E}|Lab04.vcxproj|C:\\Users\\jacks\\source\\repos\\Chess_Lab04\\231.04.Lab\\testBoard.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A9E47F2C-242D-4AB1-90EC-058438EF136E}|Lab04.vcxproj|solutionrelative:testBoard.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9E47F2C-242D-4AB1-90EC-058438EF136E}|Lab04.vcxproj|C:\\Users\\jacks\\source\\repos\\Chess_Lab04\\231.04.Lab\\piece.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A9E47F2C-242D-4AB1-90EC-058438EF136E}|Lab04.vcxproj|solutionrelative:piece.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9E47F2C-242D-4AB1-90EC-058438EF136E}|Lab04.vcxproj|C:\\Users\\jacks\\source\\repos\\Chess_Lab04\\231.04.Lab\\pieceSpace.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A9E47F2C-242D-4AB1-90EC-058438EF136E}|Lab04.vcxproj|solutionrelative:pieceSpace.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9E47F2C-242D-4AB1-90EC-058438EF136E}|Lab04.vcxproj|C:\\Users\\jacks\\source\\repos\\Chess_Lab04\\231.04.Lab\\piece.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A9E47F2C-242D-4AB1-90EC-058438EF136E}|Lab04.vcxproj|solutionrelative:piece.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9E47F2C-242D-4AB1-90EC-058438EF136E}|Lab04.vcxproj|C:\\Users\\jacks\\source\\repos\\Chess_Lab04\\231.04.Lab\\pieceKnight.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A9E47F2C-242D-4AB1-90EC-058438EF136E}|Lab04.vcxproj|solutionrelative:pieceKnight.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A9E47F2C-242D-4AB1-90EC-058438EF136E}|Lab04.vcxproj|C:\\Users\\jacks\\source\\repos\\Chess_Lab04\\231.04.Lab\\testKnight.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A9E47F2C-242D-4AB1-90EC-058438EF136E}|Lab04.vcxproj|solutionrelative:testKnight.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9E47F2C-242D-4AB1-90EC-058438EF136E}|Lab04.vcxproj|C:\\Users\\jacks\\source\\repos\\Chess_Lab04\\231.04.Lab\\board.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A9E47F2C-242D-4AB1-90EC-058438EF136E}|Lab04.vcxproj|solutionrelative:board.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A9E47F2C-242D-4AB1-90EC-058438EF136E}|Lab04.vcxproj|C:\\Users\\jacks\\source\\repos\\Chess_Lab04\\231.04.Lab\\testKnight.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A9E47F2C-242D-4AB1-90EC-058438EF136E}|Lab04.vcxproj|solutionrelative:testKnight.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9E47F2C-242D-4AB1-90EC-058438EF136E}|Lab04.vcxproj|C:\\Users\\jacks\\source\\repos\\Chess_Lab04\\231.04.Lab\\chess.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A9E47F2C-242D-4AB1-90EC-058438EF136E}|Lab04.vcxproj|solutionrelative:chess.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A9E47F2C-242D-4AB1-90EC-058438EF136E}|Lab04.vcxproj|C:\\Users\\jacks\\source\\repos\\Chess_Lab04\\231.04.Lab\\pieceKnight.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A9E47F2C-242D-4AB1-90EC-058438EF136E}|Lab04.vcxproj|solutionrelative:pieceKnight.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9E47F2C-242D-4AB1-90EC-058438EF136E}|Lab04.vcxproj|C:\\Users\\jacks\\source\\repos\\Chess_Lab04\\231.04.Lab\\board.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A9E47F2C-242D-4AB1-90EC-058438EF136E}|Lab04.vcxproj|solutionrelative:board.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9E47F2C-242D-4AB1-90EC-058438EF136E}|Lab04.vcxproj|C:\\Users\\jacks\\source\\repos\\Chess_Lab04\\231.04.Lab\\position.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A9E47F2C-242D-4AB1-90EC-058438EF136E}|Lab04.vcxproj|solutionrelative:position.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9E47F2C-242D-4AB1-90EC-058438EF136E}|Lab04.vcxproj|C:\\Users\\jacks\\source\\repos\\Chess_Lab04\\231.04.Lab\\pieceKnight.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A9E47F2C-242D-4AB1-90EC-058438EF136E}|Lab04.vcxproj|solutionrelative:pieceKnight.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,109 +34,84 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "pieceKnight.h",
-              "DocumentMoniker": "C:\\Users\\jacks\\source\\repos\\Chess_Lab04\\231.04.Lab\\pieceKnight.h",
-              "RelativeDocumentMoniker": "pieceKnight.h",
-              "ToolTip": "C:\\Users\\jacks\\source\\repos\\Chess_Lab04\\231.04.Lab\\pieceKnight.h",
-              "RelativeToolTip": "pieceKnight.h",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-10-11T14:48:09.609Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "testKnight.cpp",
-              "DocumentMoniker": "C:\\Users\\jacks\\source\\repos\\Chess_Lab04\\231.04.Lab\\testKnight.cpp",
-              "RelativeDocumentMoniker": "testKnight.cpp",
-              "ToolTip": "C:\\Users\\jacks\\source\\repos\\Chess_Lab04\\231.04.Lab\\testKnight.cpp",
-              "RelativeToolTip": "testKnight.cpp",
-              "ViewState": "AgIAACIAAAAAAAAAAAAYwDAAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-10-11T04:17:41.499Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "testBoard.cpp",
-              "DocumentMoniker": "C:\\Users\\jacks\\source\\repos\\Chess_Lab04\\231.04.Lab\\testBoard.cpp",
-              "RelativeDocumentMoniker": "testBoard.cpp",
-              "ToolTip": "C:\\Users\\jacks\\source\\repos\\Chess_Lab04\\231.04.Lab\\testBoard.cpp",
-              "RelativeToolTip": "testBoard.cpp",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAAACUAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-10-10T23:10:47.109Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "board.cpp",
-              "DocumentMoniker": "C:\\Users\\jacks\\source\\repos\\Chess_Lab04\\231.04.Lab\\board.cpp",
-              "RelativeDocumentMoniker": "board.cpp",
-              "ToolTip": "C:\\Users\\jacks\\source\\repos\\Chess_Lab04\\231.04.Lab\\board.cpp",
-              "RelativeToolTip": "board.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-10-10T22:56:22.156Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "chess.cpp",
-              "DocumentMoniker": "C:\\Users\\jacks\\source\\repos\\Chess_Lab04\\231.04.Lab\\chess.cpp",
-              "RelativeDocumentMoniker": "chess.cpp",
-              "ToolTip": "C:\\Users\\jacks\\source\\repos\\Chess_Lab04\\231.04.Lab\\chess.cpp",
-              "RelativeToolTip": "chess.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-10-10T21:32:47.678Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "piece.h",
-              "DocumentMoniker": "C:\\Users\\jacks\\source\\repos\\Chess_Lab04\\231.04.Lab\\piece.h",
-              "RelativeDocumentMoniker": "piece.h",
-              "ToolTip": "C:\\Users\\jacks\\source\\repos\\Chess_Lab04\\231.04.Lab\\piece.h",
-              "RelativeToolTip": "piece.h",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAAAGQAAAAAAAAAAAAAAA==",
+              "Title": "testKnight.h",
+              "DocumentMoniker": "C:\\Users\\jacks\\source\\repos\\Chess_Lab04\\231.04.Lab\\testKnight.h",
+              "RelativeDocumentMoniker": "testKnight.h",
+              "ToolTip": "C:\\Users\\jacks\\source\\repos\\Chess_Lab04\\231.04.Lab\\testKnight.h",
+              "RelativeToolTip": "testKnight.h",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABwAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-10-10T21:17:37.364Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "pieceSpace.h",
-              "DocumentMoniker": "C:\\Users\\jacks\\source\\repos\\Chess_Lab04\\231.04.Lab\\pieceSpace.h",
-              "RelativeDocumentMoniker": "pieceSpace.h",
-              "ToolTip": "C:\\Users\\jacks\\source\\repos\\Chess_Lab04\\231.04.Lab\\pieceSpace.h",
-              "RelativeToolTip": "pieceSpace.h",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-10-10T21:14:46.027Z",
+              "WhenOpened": "2025-10-18T04:31:52.638Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "piece.cpp",
-              "DocumentMoniker": "C:\\Users\\jacks\\source\\repos\\Chess_Lab04\\231.04.Lab\\piece.cpp",
-              "RelativeDocumentMoniker": "piece.cpp",
-              "ToolTip": "C:\\Users\\jacks\\source\\repos\\Chess_Lab04\\231.04.Lab\\piece.cpp",
-              "RelativeToolTip": "piece.cpp",
-              "ViewState": "AgIAABoAAAAAAAAAAAAYwCgAAAAGAAAAAAAAAA==",
+              "Title": "board.h",
+              "DocumentMoniker": "C:\\Users\\jacks\\source\\repos\\Chess_Lab04\\231.04.Lab\\board.h",
+              "RelativeDocumentMoniker": "board.h",
+              "ToolTip": "C:\\Users\\jacks\\source\\repos\\Chess_Lab04\\231.04.Lab\\board.h",
+              "RelativeToolTip": "board.h",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAAD8AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-10-18T04:11:38.43Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "position.h",
+              "DocumentMoniker": "C:\\Users\\jacks\\source\\repos\\Chess_Lab04\\231.04.Lab\\position.h",
+              "RelativeDocumentMoniker": "position.h",
+              "ToolTip": "C:\\Users\\jacks\\source\\repos\\Chess_Lab04\\231.04.Lab\\position.h",
+              "RelativeToolTip": "position.h",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-10-17T22:48:46.541Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "pieceKnight.h",
+              "DocumentMoniker": "C:\\Users\\jacks\\source\\repos\\Chess_Lab04\\231.04.Lab\\pieceKnight.h",
+              "RelativeDocumentMoniker": "pieceKnight.h",
+              "ToolTip": "C:\\Users\\jacks\\source\\repos\\Chess_Lab04\\231.04.Lab\\pieceKnight.h",
+              "RelativeToolTip": "pieceKnight.h",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-10-17T22:46:44.639Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "testKnight.cpp",
+              "DocumentMoniker": "C:\\Users\\jacks\\source\\repos\\Chess_Lab04\\231.04.Lab\\testKnight.cpp",
+              "RelativeDocumentMoniker": "testKnight.cpp",
+              "ToolTip": "C:\\Users\\jacks\\source\\repos\\Chess_Lab04\\231.04.Lab\\testKnight.cpp",
+              "RelativeToolTip": "testKnight.cpp",
+              "ViewState": "AgIAANIAAAAAAAAAAAAAAMAAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-10-10T20:49:13.165Z",
+              "WhenOpened": "2025-10-17T22:24:31.56Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "pieceKnight.cpp",
+              "DocumentMoniker": "C:\\Users\\jacks\\source\\repos\\Chess_Lab04\\231.04.Lab\\pieceKnight.cpp",
+              "RelativeDocumentMoniker": "pieceKnight.cpp",
+              "ToolTip": "C:\\Users\\jacks\\source\\repos\\Chess_Lab04\\231.04.Lab\\pieceKnight.cpp",
+              "RelativeToolTip": "pieceKnight.cpp",
+              "ViewState": "AgIAABcAAAAAAAAAAADwvygAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-10-17T22:47:41.012Z",
               "EditorCaption": ""
             }
           ]
