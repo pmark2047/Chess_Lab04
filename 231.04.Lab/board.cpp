@@ -195,7 +195,7 @@ void Board::move(const Move & move)
    Position src = move.getSrc();
    Position des = move.getDes();
    Piece * pSrc = board[src.getCol()][src.getRow()];
-   Piece * pDes = board[des.getCol()][des.getRow()];
+   //Piece * pDes = board[des.getCol()][des.getRow()];
    assert(pSrc->getType() != SPACE);
    assert(src.isValid());
    assert(des.isValid());
@@ -244,7 +244,7 @@ BoardEmpty::BoardEmpty() : BoardDummy(), pSpace(nullptr)
 {
    for (int r = 0; r < 8; r++)
       for (int c =0; c < 8; c++)
-         if (nullptr == board[c][r])
+         if (board[c][r] == nullptr)
             board[c][r] = new Space(c, r);
 }
 BoardEmpty::~BoardEmpty()

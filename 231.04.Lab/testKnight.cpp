@@ -72,7 +72,7 @@ void TestKnight::getMoves_capture()
    Knight knight(7, 7, false /*white*/);
    Black b1(PAWN), b2(PAWN), b3(PAWN), b4(PAWN), b5(PAWN), b6(PAWN), b7(PAWN), b8(PAWN);
    knight.fWhite = true;
-   knight.position = 0x34;
+   knight.position.colRow = 0x34;
    board.board[2][6] = &b1;
    board.board[4][6] = &b2;
    board.board[1][5] = &b3; 

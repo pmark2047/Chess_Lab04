@@ -97,6 +97,10 @@ public:
    bool operator != (const Move & rhs) const { return !(*this == rhs);     }
    bool operator <  (const Move & rhs) const
    {
+      if (source.getLocation() != rhs.source.getLocation())
+      {
+         return source.getLocation() < rhs.source.getLocation();
+      }
       return dest.getLocation() < rhs.dest.getLocation();
    }
    
@@ -118,7 +122,17 @@ public:
    friend ostream & operator << (ostream & out, Move & rhs);
    friend istream & operator >> (istream & in,  Move & rhs);
    
-   const Move & operator = (const Move & rhs) { return *this; }
+   const Move & operator = (const Move & rhs)
+   {
+      source = rhs.source;
+      dest = rhs.dest;
+      promote = rhs.promote;
+      capture = rhs.capture;
+      moveType = rhs.moveType;
+      isWhite = rhs.isWhite;
+      text = rhs.text;
+      return *this;
+   }
    const Move & operator = (const string & s)
    {
       read(s);

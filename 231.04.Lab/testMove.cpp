@@ -43,8 +43,8 @@ void TestMove::constructString_simple()
    Move move("e5e6");
 
    //verify
-   assertUnit(move.source == 0x44);
-   assertUnit(move.dest == 0x45);
+   assertUnit(move.source.colRow == 0x44);
+   assertUnit(move.dest.colRow == 0x45);
 
    //takedown
 }
@@ -60,8 +60,8 @@ void TestMove::read_simple()
 {
    Move move("e5e6");
 
-   assertUnit(move.source == 0x44);
-   assertUnit(move.dest == 0x45);
+   assertUnit(move.source.colRow == 0x44);
+   assertUnit(move.dest.colRow == 0x45);
    assertUnit(move.moveType == Move::MOVE);
 }
 
@@ -77,8 +77,8 @@ void TestMove::read_capture()
 {
    Move move("e5d6r");
 
-   assertUnit(move.source == 0x44);
-   assertUnit(move.dest == 0x35);
+   assertUnit(move.source.colRow == 0x44);
+   assertUnit(move.dest.colRow == 0x35);
    assertUnit(move.moveType == Move::MOVE);
    assertUnit(move.capture == ROOK);
 }
@@ -94,8 +94,8 @@ void TestMove::read_enpassant()
 {
    Move move("e5f6E");
 
-   assertUnit(move.source == 0x44);
-   assertUnit(move.dest == 0x55);
+   assertUnit(move.source.colRow == 0x44);
+   assertUnit(move.dest.colRow == 0x55);
    assertUnit(move.moveType == Move::ENPASSANT);
 }
 
@@ -110,8 +110,8 @@ void TestMove::read_castleKing()
 {
    Move move("e1g1c");
 
-   assertUnit(move.source == 0x40);
-   assertUnit(move.dest == 0x60);
+   assertUnit(move.source.colRow == 0x40);
+   assertUnit(move.dest.colRow == 0x60);
    assertUnit(move.moveType == Move::CASTLE_KING);
 }
 
@@ -126,8 +126,8 @@ void TestMove::read_castleQueen()
 {
    Move move("e1c1C");
 
-   assertUnit(move.source == 0x44);
-   assertUnit(move.dest == 0x45);
+   assertUnit(move.source.colRow == 0x40);
+   assertUnit(move.dest.colRow == 0x20);
    assertUnit(move.moveType == Move::CASTLE_QUEEN);
 }
 
@@ -142,8 +142,8 @@ void TestMove::assign_simple()
 {
    Move move("e5e6");
 
-   assertUnit(move.source == 0x44);
-   assertUnit(move.dest == 0x45);
+   assertUnit(move.source.colRow == 0x44);
+   assertUnit(move.dest.colRow == 0x45);
    assertUnit(move.moveType == Move::MOVE);
 }
 

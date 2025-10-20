@@ -70,7 +70,7 @@ public:
    
    // Location : The Position class can work with locations, which
    //            are 0...63 where we start in row 0, then row 1, etc.
-   Position(int location) : colRow(0xff) { }
+   Position(int location) : colRow(0xFF) { }
    int getLocation() const               { return (getRow() * 8) + getCol(); }
    void setLocation(int location)        {           }
 
