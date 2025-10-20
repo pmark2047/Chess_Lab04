@@ -214,7 +214,7 @@ void TestKnight::getMoves_end()
    g1e2p.capture = PAWN;
    Move g1h3;
    g1h3.source.colRow = 0x60;
-   g1h3.dest.colRow = 0x52;
+   g1h3.dest.colRow = 0x72;
    g1h3.capture = SPACE;
 
    // EXERCISE
@@ -229,6 +229,64 @@ void TestKnight::getMoves_end()
    board.board[6][0] = nullptr; // white knight
    board.board[4][1] = nullptr; // black pawn
    board.board[5][2] = nullptr; // white pawn
+
+}
+
+/*************************************
+ * +---a-b-c-d-e-f-g-h---+
+ * |                     |
+ * 8                     8
+ * 7       p   .         7
+ * 6     .       p       6
+ * 5        (n)          5
+ * 4     p       .       4
+ * 3       .   p         3
+ * 2                     2
+ * 1                     1
+ * |                     |
+ * +---a-b-c-d-e-f-g-h---+
+ **************************************/
+void TestKnight::getMoves_halfFree()
+{
+   // SETUP
+   BoardEmpty board;
+   Knight knight(7, 7, false /*white*/);
+   knight.fWhite = true;
+   knight.position.colRow = 0x34;
+   White w1(PAWN);
+   board.board[2][6] = &w1;
+   White w2(PAWN);
+   board.board[5][5] = &w2;
+   White w3(PAWN);
+   board.board[4][2] = &w3;
+   White w4(PAWN);
+   board.board[1][3] = &w4;
+   set <Move> moves;
+   Move d5b6, d5e7, d5c3, d5f4;
+   d5b6.source.colRow = d5e7.source.colRow =
+      d5c3.source.colRow = d5f4.source.colRow = 0x34;
+   d5b6.capture = d5e7.capture =
+   d5c3.capture = d5f4.capture = SPACE;
+   d5b6.dest.colRow = 0x15;
+   d5e7.dest.colRow = 0x46;
+   d5c3.dest.colRow = 0x22;
+   d5f4.dest.colRow = 0x53;
+   // EXERCISE
+   knight.getMoves(moves, board);
+   
+   // VERIFY
+   assertUnit(moves.size() == 4);   // many possible moves
+   assertUnit(moves.find(d5b6) != moves.end());
+   assertUnit(moves.find(d5e7) != moves.end());
+   assertUnit(moves.find(d5c3) != moves.end());
+   assertUnit(moves.find(d5f4) != moves.end());
+
+   // TEARDOWN
+   board.board[3][4] = nullptr; // white knight
+   board.board[2][6] = nullptr; // white pawn
+   board.board[5][5] = nullptr; // white pawn
+   board.board[4][2] = nullptr; // white pawn
+   board.board[1][3] = nullptr; // white pawn
 
 }
 

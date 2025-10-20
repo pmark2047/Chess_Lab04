@@ -26,6 +26,7 @@ public:
       getMoves_capture();
       getMoves_free();
       getMoves_end();
+      getMoves_halfFree();
       getType();
       
       report("Knight");
@@ -35,5 +36,6 @@ private:
    void getMoves_capture();
    void getMoves_free();
    void getMoves_end();
+   void getMoves_halfFree();
    void getType();
 };
