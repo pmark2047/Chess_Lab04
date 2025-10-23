@@ -24,6 +24,7 @@ public:
    Space() : Piece(0,0)                {               }
    Space(int c, int r) : Piece(c, r)   {               }
    ~Space()                            {               }
-   PieceType getType()           const { return SPACE; }
-   void display(ogstream* pgout) const {               }
+   PieceType getType()           const override { return SPACE; }
+   void display(ogstream* pgout) const override {               }
+   void getMoves(set <Move>& moves, const Board& board) const override  { }
 };

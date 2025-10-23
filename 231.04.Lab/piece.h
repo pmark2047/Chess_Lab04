@@ -78,7 +78,7 @@ public:
    // overwritten by the various pieces
    virtual PieceType getType()                                    const = 0;
    virtual void display(ogstream * pgout)                         const = 0;
-   void getMoves(set <Move> & moves, const Board & board) const;
+   virtual void getMoves(set <Move> & moves, const Board & board) const = 0;
 
 protected:
 
@@ -100,8 +100,9 @@ public:
    PieceDerived(const Position& pos, bool isWhite) : Piece(pos, isWhite)   { }
    PieceDerived(int c, int r, bool isWhite) : Piece(c, r, isWhite)         { }
    ~PieceDerived()                                               {           }
-   PieceType getType()            const     { return SPACE;                  }
-   void display(ogstream* pgout)  const     { assert(false);                 }
+   PieceType getType()            const override   { return SPACE;                  }
+   void display(ogstream* pgout)  const override   { assert(false);                 }
+   void getMoves(set <Move>& moves, const Board& board) const override  { }
 };
 
 
@@ -134,19 +135,20 @@ public:
    // getters
    bool operator == (char letter)  const { assert(false); return true;  }
    bool operator != (char letter)  const { assert(false); return true;  }
-   bool isWhite()                  const { assert(false); return true;  }
-   bool isMoved()                  const { assert(false); return true;  }
-   int  getNMoves()                const { assert(false); return 0;     }
-   void decrementNMoves()                { assert(false);               }
-   const Position & getPosition()  const { assert(false); return position; }
-   bool justMoved(int currentMove) const { assert(false); return true;  }
+   bool isWhite()                  const override { assert(false); return true;  }
+   bool isMoved()                  const override { assert(false); return true;  }
+   int  getNMoves()                const override { assert(false); return 0;     }
+   void decrementNMoves()                override { assert(false);               }
+   const Position & getPosition()  const override { assert(false); return position; }
+   bool justMoved(int currentMove) const override { assert(false); return true;  }
 
    // setter
-   void setLastMove(int currentMove)     { assert(false);               }
+   void setLastMove(int currentMove)     override { assert(false);               }
 
    // overwritten by the various pieces
-   PieceType getType()             const { assert(false); return SPACE; }
-   void display(ogstream * pgout)  const { assert(false);               }
+   PieceType getType()             const override { assert(false); return SPACE; }
+   void display(ogstream * pgout)  const override { assert(false);               }
+   void getMoves(set <Move>& moves, const Board& board) const override  { }
 };
 
 /***************************************************
@@ -180,10 +182,10 @@ public:
       position = rhs;              // actually change the position
       return *this;                // return self
    }
-   void setLastMove(int currentMove) { lastMove = currentMove; }
-   const Position& getPosition()  const { return position; }
-   PieceType getType()            const { return pt;       }
-   bool isWhite()                 const { return fWhite;   }
+   void setLastMove(int currentMove)    override { lastMove = currentMove; }
+   const Position& getPosition()  const override { return position; }
+   PieceType getType()            const override { return pt;       }
+   bool isWhite()                 const override { return fWhite;   }
 
 
    static int numConstruct;
@@ -211,9 +213,9 @@ class White : public PieceDummy
 public:
    White() : PieceDummy(), pt(ROOK) {}
    White(PieceType pt) : PieceDummy(), pt(pt) {}
-   bool isWhite() const { return true; }
-   PieceType getType() const { return pt; }
-   void getMoves(set <Move>& moves, const Board& board) const { }
+   bool isWhite() const override { return true; }
+   PieceType getType() const override { return pt; }
+   void getMoves(set <Move>& moves, const Board& board) const override { }
 };
 
 class Black : public PieceDummy
@@ -222,9 +224,9 @@ class Black : public PieceDummy
 public:
    Black() : PieceDummy(), pt(ROOK) {}
    Black(PieceType pt) : PieceDummy(), pt(pt) {}
-   bool isWhite() const { return false; }
-   PieceType getType() const { return pt; }
-   void getMoves(set <Move>& moves, const Board& board) const { }
+   bool isWhite() const override { return false; }
+   PieceType getType() const override { return pt; }
+   void getMoves(set <Move>& moves, const Board& board) const override { }
 };
 
 

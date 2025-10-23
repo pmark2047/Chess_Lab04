@@ -30,8 +30,8 @@
             filePath = "piece.h"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "185"
-            endingLineNumber = "185"
+            startingLineNumber = "187"
+            endingLineNumber = "187"
             landmarkName = "PieceSpy"
             landmarkType = "3">
          </BreakpointContent>

@@ -61,11 +61,6 @@ public:
    void free();
    
    void reset(bool fFree);
-   Piece* factory(PieceType pt, int col, int row)
-   {
-      // stub for factory
-      return new Space(col, row);
-   }
 
 protected:
    void assertBoard();
