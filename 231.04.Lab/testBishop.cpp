@@ -106,8 +106,6 @@ void TestBishop::getMoves_slideToEnd()
    
    
    // TEARDOWN
-   board.board[1][2] = board.board[3][2] = nullptr;
-   board.board[1][0] = board.board[3][0] = nullptr;
 }
 
 

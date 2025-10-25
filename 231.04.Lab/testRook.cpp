@@ -167,7 +167,7 @@ void TestRook::getMoves_slideToBlock()
    rook.getMoves(moves, board);
    
    // VERIFY
-   assertUnit(moves.size() == 10); // 14 possible moves
+   assertUnit(moves.size() == 10); // 10 possible moves
    assertUnit(moves.find(c2b2) != moves.end());
    assertUnit(moves.find(c2d2) != moves.end());
    assertUnit(moves.find(c2e2) != moves.end());
