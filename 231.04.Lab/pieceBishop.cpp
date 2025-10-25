@@ -25,29 +25,35 @@ void Bishop::display(ogstream* pgout) const
 *         From a list of deltas, find all the
 *         possible moves
 ***************************************************/
-set <Move> Bishop::getMovesNoslide(const Board &board,
-                                   const Delta *deltas,
+set <Move> Bishop::moveSlide(const Board & board,
+                                   const Delta deltas[],
                                    int numDelta) const
 {
    set <Move> moves;
    for (int i = 0; i < numDelta; i++)
    {
-      Position posMove(position, deltas[i]);
-      // capture if there is a piece at the end of the slide
-      if (!posMove.isValid())
-      {
-         continue;
-      }
-
-      if (posMove.isValid() &&
-          (board[posMove].isWhite() != fWhite || board[posMove] == SPACE))
+      Position posMove(getPosition(), deltas[i]);
+      
+      // slide throught the blank spaces
+      for(;
+          posMove.isValid() && board[posMove] == SPACE;
+          posMove += deltas[i])
       {
          Move move;
          move.setSrc(getPosition());
          move.setDes(posMove);
          move.setWhiteMove(isWhite());
-         if (board[posMove] != SPACE)
-            move.setCapture(board[posMove].getType());
+         moves.insert(move);
+      }
+      
+      // capture if there is a piece at the end of the slide
+      if (posMove.isValid() && board[posMove].isWhite() != isWhite() && board[posMove] != SPACE)
+      {
+         Move move;
+         move.setSrc(getPosition());
+         move.setDes(posMove);
+         move.setWhiteMove(isWhite());
+         move.setCapture(board[posMove].getType());
          moves.insert(move);
       }
    }
@@ -68,6 +74,6 @@ void Bishop::getMoves(set <Move>& moves, const Board& board) const
                {1, -1}
    };
    
-   moves = getMovesNoslide(board, delta, sizeof(delta) / sizeof(delta[0]));
+   moves = moveSlide(board, delta, sizeof(delta) / sizeof(delta[0]));
 
 }

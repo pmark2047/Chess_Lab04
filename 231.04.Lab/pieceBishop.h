@@ -25,8 +25,7 @@ class Bishop : public Piece
    void getMoves(set <Move>& moves, const Board& board) const;
    void display(ogstream* pgout)  const;
    private:
-   set <Move> getMovesNoslide(const Board& board,
-                              const Delta deltas[],
-                              int numDelta) const;
+   set <Move> moveSlide(const Board & board, const Delta deltas[],
+                                int numDelta) const;
 };
 
