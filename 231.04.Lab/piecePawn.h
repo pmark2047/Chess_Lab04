@@ -28,5 +28,8 @@ class Pawn : public Piece
    set <Move> getMovesNoslide(const Board& board,
                               const Delta deltas[],
                               int numDelta) const;
+   set <Move> MovePawnAttack(set <Move> & moves, const Board & board) const;
+   set <Move> MoveEnPassant(set <Move> & moves, const Board & board) const;
+   set <Move> MovePawnDouble(set <Move> & moves, const Board & board) const;
 };
 

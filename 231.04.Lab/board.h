@@ -62,6 +62,7 @@ public:
    
    void reset(bool fFree);
 
+
 protected:
    void assertBoard();
    int numMoves;
@@ -106,7 +107,7 @@ public:
       assert(false);
    }
    void move(const Move& move) { assert(false); }
-   int  getCurrentMove() const { assert(false); return 0; }
+   int  getCurrentMove() const { return numMoves; }
    bool whiteTurn()      const { assert(false); return false; }
    Piece& operator [] (const Position& pos)
    {
