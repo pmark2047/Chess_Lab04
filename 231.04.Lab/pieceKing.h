@@ -28,5 +28,7 @@ class King : public Piece
    set <Move> getMovesNoslide(const Board& board,
                               const Delta deltas[],
                               int numDelta) const;
+   set <Move> moveCastleKing(set <Move> & moves, const Board & board) const;
+   set <Move> moveCastleQueen(set <Move> & moves, const Board & board) const;
 };
 
