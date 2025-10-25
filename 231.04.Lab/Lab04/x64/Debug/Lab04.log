@@ -1,4 +1,26 @@
-﻿  test.cpp
-  testKnight.cpp
+﻿  testPawn.cpp
+  testPiece.cpp
+  uiInteract.cpp
   Generating Code...
-  Lab04.vcxproj -> C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\x64\Debug\Lab04.exe
+  LINK : C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\x64\Debug\Lab04.exe not found or not built by the last incremental link; performing full link
+board.obj : error LNK2001: unresolved external symbol "public: virtual void __cdecl Rook::getMoves(class std::set<class Move,struct std::less<class Move>,class std::allocator<class Move> > &,class Board const &)const " (?getMoves@Rook@@UEBAXAEAV?$set@VMove@@U?$less@VMove@@@std@@V?$allocator@VMove@@@3@@std@@AEBVBoard@@@Z)
+testRook.obj : error LNK2001: unresolved external symbol "public: virtual void __cdecl Rook::getMoves(class std::set<class Move,struct std::less<class Move>,class std::allocator<class Move> > &,class Board const &)const " (?getMoves@Rook@@UEBAXAEAV?$set@VMove@@U?$less@VMove@@@std@@V?$allocator@VMove@@@3@@std@@AEBVBoard@@@Z)
+board.obj : error LNK2001: unresolved external symbol "public: virtual void __cdecl Rook::display(class ogstream *)const " (?display@Rook@@UEBAXPEAVogstream@@@Z)
+testRook.obj : error LNK2001: unresolved external symbol "public: virtual void __cdecl Rook::display(class ogstream *)const " (?display@Rook@@UEBAXPEAVogstream@@@Z)
+board.obj : error LNK2001: unresolved external symbol "public: virtual void __cdecl Bishop::getMoves(class std::set<class Move,struct std::less<class Move>,class std::allocator<class Move> > &,class Board const &)const " (?getMoves@Bishop@@UEBAXAEAV?$set@VMove@@U?$less@VMove@@@std@@V?$allocator@VMove@@@3@@std@@AEBVBoard@@@Z)
+testBishop.obj : error LNK2001: unresolved external symbol "public: virtual void __cdecl Bishop::getMoves(class std::set<class Move,struct std::less<class Move>,class std::allocator<class Move> > &,class Board const &)const " (?getMoves@Bishop@@UEBAXAEAV?$set@VMove@@U?$less@VMove@@@std@@V?$allocator@VMove@@@3@@std@@AEBVBoard@@@Z)
+board.obj : error LNK2001: unresolved external symbol "public: virtual void __cdecl Bishop::display(class ogstream *)const " (?display@Bishop@@UEBAXPEAVogstream@@@Z)
+testBishop.obj : error LNK2001: unresolved external symbol "public: virtual void __cdecl Bishop::display(class ogstream *)const " (?display@Bishop@@UEBAXPEAVogstream@@@Z)
+board.obj : error LNK2001: unresolved external symbol "public: virtual void __cdecl King::getMoves(class std::set<class Move,struct std::less<class Move>,class std::allocator<class Move> > &,class Board const &)const " (?getMoves@King@@UEBAXAEAV?$set@VMove@@U?$less@VMove@@@std@@V?$allocator@VMove@@@3@@std@@AEBVBoard@@@Z)
+testKing.obj : error LNK2001: unresolved external symbol "public: virtual void __cdecl King::getMoves(class std::set<class Move,struct std::less<class Move>,class std::allocator<class Move> > &,class Board const &)const " (?getMoves@King@@UEBAXAEAV?$set@VMove@@U?$less@VMove@@@std@@V?$allocator@VMove@@@3@@std@@AEBVBoard@@@Z)
+board.obj : error LNK2001: unresolved external symbol "public: virtual void __cdecl King::display(class ogstream *)const " (?display@King@@UEBAXPEAVogstream@@@Z)
+testKing.obj : error LNK2001: unresolved external symbol "public: virtual void __cdecl King::display(class ogstream *)const " (?display@King@@UEBAXPEAVogstream@@@Z)
+board.obj : error LNK2001: unresolved external symbol "public: virtual void __cdecl Queen::getMoves(class std::set<class Move,struct std::less<class Move>,class std::allocator<class Move> > &,class Board const &)const " (?getMoves@Queen@@UEBAXAEAV?$set@VMove@@U?$less@VMove@@@std@@V?$allocator@VMove@@@3@@std@@AEBVBoard@@@Z)
+testQueen.obj : error LNK2001: unresolved external symbol "public: virtual void __cdecl Queen::getMoves(class std::set<class Move,struct std::less<class Move>,class std::allocator<class Move> > &,class Board const &)const " (?getMoves@Queen@@UEBAXAEAV?$set@VMove@@U?$less@VMove@@@std@@V?$allocator@VMove@@@3@@std@@AEBVBoard@@@Z)
+board.obj : error LNK2001: unresolved external symbol "public: virtual void __cdecl Queen::display(class ogstream *)const " (?display@Queen@@UEBAXPEAVogstream@@@Z)
+testQueen.obj : error LNK2001: unresolved external symbol "public: virtual void __cdecl Queen::display(class ogstream *)const " (?display@Queen@@UEBAXPEAVogstream@@@Z)
+board.obj : error LNK2001: unresolved external symbol "public: virtual void __cdecl Pawn::getMoves(class std::set<class Move,struct std::less<class Move>,class std::allocator<class Move> > &,class Board const &)const " (?getMoves@Pawn@@UEBAXAEAV?$set@VMove@@U?$less@VMove@@@std@@V?$allocator@VMove@@@3@@std@@AEBVBoard@@@Z)
+testPawn.obj : error LNK2001: unresolved external symbol "public: virtual void __cdecl Pawn::getMoves(class std::set<class Move,struct std::less<class Move>,class std::allocator<class Move> > &,class Board const &)const " (?getMoves@Pawn@@UEBAXAEAV?$set@VMove@@U?$less@VMove@@@std@@V?$allocator@VMove@@@3@@std@@AEBVBoard@@@Z)
+board.obj : error LNK2001: unresolved external symbol "public: virtual void __cdecl Pawn::display(class ogstream *)const " (?display@Pawn@@UEBAXPEAVogstream@@@Z)
+testPawn.obj : error LNK2001: unresolved external symbol "public: virtual void __cdecl Pawn::display(class ogstream *)const " (?display@Pawn@@UEBAXPEAVogstream@@@Z)
+C:\Users\jacks\source\repos\Chess_Lab04\231.04.Lab\x64\Debug\Lab04.exe : fatal error LNK1120: 10 unresolved externals

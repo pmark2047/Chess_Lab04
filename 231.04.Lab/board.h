@@ -78,6 +78,7 @@ protected:
 class BoardDummy : public Board
 {
    friend TestBoard;
+   friend TestPawn;
 public:
    BoardDummy()
    {
